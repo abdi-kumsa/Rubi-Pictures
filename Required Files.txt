@@ -1,0 +1,42 @@
+1. Global Assets
+Company Logo: Your primary "Rubi Pictures" logo (ideally in both light and dark variations with a transparent background) for the navigation bar and footer.
+Favicon: A small icon for the browser tab.
+2. Home Page
+Hero Background Video: A high-quality, cinematic reel or brand video showcasing your award-winning film and media production work in Africa. This will be the first thing visitors see.
+Partner/Client Logos (7): Transparent PNGs or SVGs for the "Trusted By" animated marquee:
+Al Jazeera
+IFRC
+CGTN
+DW
+Corps Africa
+AfriStar
+SGN
+3. About Page (Team Members)
+Professional Headshots (6): High-quality portraits for the "Meet the Creators" section:
+David Kamau (Founder & Creative Director)
+Sarah Wanjiru (Head of Production)
+James Omondi (Director of Photography)
+Grace Akinyi (Senior Producer)
+Michael Mwangi (Post-Production Lead)
+Linda Njeri (Creative Strategist)
+4. Work / Portfolio Page
+Project Thumbnails (12): Engaging images or short looping GIFs representing each of the following projects (currently displayed as dark grey boxes):
+Voices from the Horn (Al Jazeera)
+Climate Action Stories (IFRC)
+Africa Rising: Tech Innovation (CGTN)
+Sustainable Development Series (DW)
+Youth Leadership Initiative (Corps Africa)
+African Music Heritage (AfriStar)
+Community Health Documentary (IFRC)
+Trade Corridors of East Africa (CGTN)
+Nairobi Tech Hub (SGN)
+Women in Agriculture (Al Jazeera)
+Green Energy Revolution (DW)
+Volunteer Impact Stories (Corps Africa)
+5. Services Page (Optional but recommended)
+Currently, this page uses minimal icons, but to make it feel premium, you could provide 4 background images or short B-roll clips that represent:
+
+Documentary Production
+Commercial Films
+News Coverage
+Post Production
