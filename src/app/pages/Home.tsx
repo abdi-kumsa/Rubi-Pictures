@@ -88,7 +88,7 @@ export function Home() {
         }
 
         .animate-marquee {
-          animation: marquee 15s linear infinite;
+          animation: marquee 7.5s linear infinite;
         }
 
         @media (min-width: 768px) {
