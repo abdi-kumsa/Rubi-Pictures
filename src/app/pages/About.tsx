@@ -4,8 +4,8 @@ export function About() {
 
   return (
     <div className="bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 py-24">
-        <h1 className="text-6xl font-bold text-black mb-12">
+      <div className="max-w-[1400px] mx-auto px-6 py-16 md:py-24">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-12">
           Africa's Premier Production House
         </h1>
 
@@ -25,16 +25,16 @@ export function About() {
           <p className="text-xs font-bold tracking-wider text-[#B93B8F] mb-3">
             LEADERSHIP
           </p>
-          <h2 className="text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Meet the Founder
           </h2>
           <p className="text-black/60 mb-16 max-w-xl">
             A visionary storyteller and producer dedicated to bringing authentic African stories to the world stage. Discover the multi-faceted expertise behind Rubi Pictures.
           </p>
 
-          <div className="grid grid-cols-2 gap-12 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             {/* Left: Founder Image Placeholder */}
-            <div className="bg-gradient-to-br from-[#B93B8F]/10 to-[#FF6B35]/10 rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[500px] border border-black/5 relative">
+            <div className="bg-gradient-to-br from-[#B93B8F]/10 to-[#FF6B35]/10 rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[300px] md:min-h-[500px] border border-black/5 relative">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#B93B8F] to-[#FF6B35] rounded-bl-full opacity-20"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#B93B8F] to-[#FF6B35] rounded-tr-full opacity-20"></div>
@@ -43,13 +43,13 @@ export function About() {
             </div>
 
             {/* Right: Featured Detail Card */}
-            <div className="bg-gradient-to-br from-black/90 to-black/80 rounded-lg overflow-hidden shadow-xl relative flex flex-col justify-center min-h-[500px]">
+            <div className="bg-gradient-to-br from-black/90 to-black/80 rounded-lg overflow-hidden shadow-xl relative flex flex-col justify-center min-h-0 md:min-h-[500px]">
               <div className="absolute inset-0 bg-gradient-to-br from-[#B93B8F]/20 to-[#FF6B35]/20"></div>
-              <div className="relative p-12 h-full flex flex-col">
+              <div className="relative p-8 md:p-12 h-full flex flex-col">
                 <p className="text-xs font-bold tracking-wider text-[#FF6B35] mb-2">
                   CREATIVE PRODUCER | DIRECTOR
                 </p>
-                <h2 className="text-5xl font-bold text-white mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
                   Rahab Wambui
                 </h2>
 

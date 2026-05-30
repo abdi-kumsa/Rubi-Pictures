@@ -26,12 +26,12 @@ export function Home() {
         </video>
 
         {/* Hero Text Overlay */}
-        <div className="absolute bottom-20 left-0 right-0 px-6">
+        <div className="absolute bottom-24 md:bottom-20 left-0 right-0 px-6">
           <div className="max-w-[1400px] mx-auto">
-            <h1 className="text-6xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               We Tell Africa's Stories to the World
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-lg md:text-xl text-white/90">
               Award-winning film and media production based in Nairobi, Kenya
             </p>
           </div>

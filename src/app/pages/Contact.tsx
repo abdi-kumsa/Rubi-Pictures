@@ -15,11 +15,11 @@ export function Contact() {
 
   return (
     <div className="bg-white">
-      <div className="max-w-[1100px] mx-auto px-6 py-24">
-        <div className="grid grid-cols-2 gap-20">
+      <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column */}
           <div>
-            <h1 className="text-5xl font-bold text-black mb-6">Get In Touch</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">Get In Touch</h1>
             <p className="text-lg text-[#1a1a1a] mb-12 leading-relaxed">
               Have a project in mind or want to learn more about our services?
               We'd love to hear from you. Reach out and let's start a

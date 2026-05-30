@@ -145,10 +145,10 @@ export function Work() {
   return (
     <div className="bg-white">
       <div className="max-w-[1400px] mx-auto px-6 py-16">
-        <h1 className="text-5xl font-bold text-black mb-12">Our Work</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-12">Our Work</h1>
 
         {/* Filter Tabs */}
-        <div className="flex gap-6 mb-16 border-b border-[#e0e0e0] overflow-x-auto">
+        <div className="flex gap-4 md:gap-6 mb-16 border-b border-[#e0e0e0] overflow-x-auto pb-2">
           {partners.map((partner) => (
             <button
               key={partner}
@@ -168,7 +168,7 @@ export function Work() {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <a
               href={project.link}

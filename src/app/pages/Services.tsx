@@ -46,11 +46,11 @@ export function Services() {
 
   return (
     <div className="bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 py-24">
+      <div className="max-w-[1400px] mx-auto px-6 py-16 md:py-24">
         <p className="text-xs font-bold tracking-wider text-[#B93B8F] mb-3">
           WHAT WE DO
         </p>
-        <h1 className="text-5xl font-bold text-black mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
           Bringing Stories to Life
         </h1>
         <p className="text-black/60 mb-16 max-w-xl">
@@ -58,9 +58,9 @@ export function Services() {
           that informs, inspires, and makes an impact.
         </p>
 
-        <div className="grid grid-cols-2 gap-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
           {/* Left: Services List */}
-          <div className="bg-white border-l-4 border-[#FF6B35] rounded-lg shadow-lg p-8">
+          <div className="bg-white border-l-4 border-[#FF6B35] rounded-lg shadow-lg p-6 md:p-8">
             <div className="space-y-6">
               {services.map((service, index) => {
                 const Icon = service.icon;
@@ -118,7 +118,7 @@ export function Services() {
               <p className="text-xs font-bold tracking-wider text-[#FF6B35] mb-4">
                 {services[activeService].title.toUpperCase()}
               </p>
-              <h2 className="text-4xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
                 Real Stories.
                 <br />
                 Real Impact.
