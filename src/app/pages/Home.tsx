@@ -88,7 +88,13 @@ export function Home() {
         }
 
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 15s linear infinite;
+        }
+
+        @media (min-width: 768px) {
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
         }
 
         .animate-marquee:hover {
