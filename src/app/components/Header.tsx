@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router";
 import { Menu, X } from "lucide-react";
 
@@ -14,6 +14,15 @@ const partners = [
 export function Header() {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handlePartnerClick = (partner: string) => {
     navigate(`/work?partner=${encodeURIComponent(partner)}`);
@@ -25,9 +34,9 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white'}`}>
       {/* Top Utility Bar (Hidden on mobile) */}
-      <div className="hidden lg:block bg-gradient-to-r from-[#F8F8F8] via-white to-[#F8F8F8] border-b border-[#e0e0e0]">
+      <div className={`hidden lg:block bg-gradient-to-r from-[#F8F8F8] via-white to-[#F8F8F8] border-b transition-all duration-300 overflow-hidden ${isScrolled ? 'h-0 opacity-0 border-transparent' : 'h-[44px] opacity-100 border-[#e0e0e0]'}`}>
         <div className="max-w-[1400px] mx-auto px-6 py-3.5">
           <div className="flex items-center justify-center gap-1">
             <span className="text-xs font-semibold text-black/40 mr-4 tracking-wider">
@@ -51,8 +60,8 @@ export function Header() {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="border-b border-[#e0e0e0] shadow-sm relative">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-4">
+      <div className="border-b border-[#e0e0e0] relative">
+        <div className={`max-w-[1400px] mx-auto px-4 md:px-6 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
           <div className="flex items-center justify-between">
             <Link to="/" className="text-xl font-bold z-50" onClick={() => setIsMobileMenuOpen(false)}>
               <img src="/Company Logo.png?v=4" alt="Rubi Pictures" className="h-10 md:h-16 w-auto object-contain" />

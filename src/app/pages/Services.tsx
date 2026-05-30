@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { Film, Video, Radio, Scissors, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -47,20 +48,33 @@ export function Services() {
   return (
     <div className="bg-white">
       <div className="max-w-[1400px] mx-auto px-6 py-16 md:py-24">
-        <p className="text-xs font-bold tracking-wider text-[#B93B8F] mb-3">
-          WHAT WE DO
-        </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
-          Bringing Stories to Life
-        </h1>
-        <p className="text-black/60 mb-16 max-w-xl">
-          From powerful documentaries to global news coverage, we craft content
-          that informs, inspires, and makes an impact.
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-xs font-bold tracking-wider text-[#B93B8F] mb-3">
+            WHAT WE DO
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+            Bringing Stories to Life
+          </h1>
+          <p className="text-black/60 mb-16 max-w-xl">
+            From powerful documentaries to global news coverage, we craft content
+            that informs, inspires, and makes an impact.
+          </p>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
           {/* Left: Services List */}
-          <div className="bg-white border-l-4 border-[#FF6B35] rounded-lg shadow-lg p-6 md:p-8">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white border-l-4 border-[#FF6B35] rounded-lg shadow-lg p-6 md:p-8"
+          >
             <div className="space-y-6">
               {services.map((service, index) => {
                 const Icon = service.icon;
@@ -109,10 +123,16 @@ export function Services() {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Featured Service Card */}
-          <div className="bg-gradient-to-br from-black/90 to-black/80 rounded-lg overflow-hidden shadow-xl relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-black/90 to-black/80 rounded-lg overflow-hidden shadow-xl relative"
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-[#B93B8F]/20 to-[#FF6B35]/20"></div>
             <div className="relative p-8 h-full flex flex-col">
               <p className="text-xs font-bold tracking-wider text-[#FF6B35] mb-4">
@@ -136,7 +156,7 @@ export function Services() {
                 Learn More
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Carousel Indicators */}

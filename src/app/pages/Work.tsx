@@ -182,12 +182,12 @@ export function Work() {
                 style={{ backgroundColor: project.thumbnailFallbackColor }}
               >
                 {project.thumbnailImage ? (
-                  <img src={project.thumbnailImage} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={project.thumbnailImage} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 ) : (
                   <span className="text-white/50 font-bold tracking-wider text-sm">VIDEO</span>
                 )}
                 {/* Play Button Overlay */}
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
                   </div>
