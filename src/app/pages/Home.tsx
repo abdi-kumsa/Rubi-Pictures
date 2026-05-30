@@ -5,8 +5,8 @@ const partners = [
   { name: "IFRC", logo: "/Partners/IFRC.png" },
   { name: "CGTN", logo: "/Partners/CGTN.png" },
   { name: "DW", logo: "/Partners/DW.png" },
-  { name: "Corps Africa", logo: "/Partners/CorpsAfrica.png" },
-  { name: "Afristart&SGR", logo: "/Partners/AfriStart&SGR.jpg" },
+  { name: "CorpsAfrica", logo: "/Partners/CorpsAfrica.png" },
+  { name: "Afristar&SGR", logo: "/Partners/AfriStart&SGR.jpg" },
 ];
 
 export function Home() {

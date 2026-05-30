@@ -7,8 +7,8 @@ const partners = [
   "IFRC",
   "CGTN",
   "DW",
-  "Corps Africa",
-  "Afristart&SGR",
+  "CorpsAfrica",
+  "Afristar&SGR",
 ];
 
 const projects = [
@@ -105,21 +105,21 @@ const projects = [
   },
   {
     title: "Corps Africa Initiative 1",
-    client: "Corps Africa",
+    client: "CorpsAfrica",
     link: "https://www.youtube.com/watch?v=dDzXJ9w_MMI",
     thumbnailImage: "https://img.youtube.com/vi/dDzXJ9w_MMI/hqdefault.jpg",
     thumbnailFallbackColor: "#10B981",
   },
   {
     title: "Corps Africa Initiative 2",
-    client: "Corps Africa",
+    client: "CorpsAfrica",
     link: "https://www.youtube.com/watch?v=tbKFtFvfoJc",
     thumbnailImage: "https://img.youtube.com/vi/tbKFtFvfoJc/hqdefault.jpg",
     thumbnailFallbackColor: "#10B981",
   },
   {
     title: "Afristart&SGR Profile",
-    client: "Afristart&SGR",
+    client: "Afristar&SGR",
     link: "https://www.youtube.com/watch?app=desktop&v=mHL7z7s86QQ",
     thumbnailImage: "https://img.youtube.com/vi/mHL7z7s86QQ/hqdefault.jpg",
     thumbnailFallbackColor: "#8B5CF6",
