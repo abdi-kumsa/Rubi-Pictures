@@ -53,12 +53,12 @@ export function Home() {
           </p>
 
           <div className="overflow-hidden relative">
-            <div className="flex animate-marquee">
+            <div className="flex animate-marquee w-max">
               {/* First set of logos */}
               {partners.map((partner, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 mx-8 px-8 py-4 border border-black/10 rounded-lg min-w-[180px] h-24 flex items-center justify-center bg-white"
+                  className="flex-shrink-0 mx-4 md:mx-8 px-4 md:px-8 py-4 border border-black/10 rounded-lg min-w-[140px] md:min-w-[180px] h-20 md:h-24 flex items-center justify-center bg-white"
                 >
                   <img src={partner.logo} alt={partner.name} className="max-h-full max-w-full object-contain transition-all" />
                 </div>
@@ -67,7 +67,7 @@ export function Home() {
               {partners.map((partner, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 mx-8 px-8 py-4 border border-black/10 rounded-lg min-w-[180px] h-24 flex items-center justify-center bg-white"
+                  className="flex-shrink-0 mx-4 md:mx-8 px-4 md:px-8 py-4 border border-black/10 rounded-lg min-w-[140px] md:min-w-[180px] h-20 md:h-24 flex items-center justify-center bg-white"
                 >
                   <img src={partner.logo} alt={partner.name} className="max-h-full max-w-full object-contain transition-all" />
                 </div>
