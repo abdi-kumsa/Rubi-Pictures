@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
 import { Helmet } from 'react-helmet-async';
 
 export function Contact() {
@@ -8,10 +8,32 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to backend for email processing
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xeedbbyj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -92,6 +114,7 @@ export function Contact() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -112,6 +135,7 @@ export function Contact() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -131,6 +155,7 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
@@ -144,10 +169,23 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-8 py-3.5 bg-gradient-to-r from-[#8B0000] to-[#FF6B35] text-white font-bold rounded-lg hover:opacity-90 transition-opacity"
+                disabled={status === "submitting"}
+                className="w-full px-8 py-3.5 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
               >
-                Send Message
+                {status === "submitting" ? "Sending..." : "Send Message"}
               </button>
+              
+              {status === "success" && (
+                <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg flex items-center gap-3">
+                  <CheckCircle size={20} />
+                  <p>Your message has been sent successfully!</p>
+                </div>
+              )}
+              {status === "error" && (
+                <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
+                  <p>Oops! There was a problem submitting your form. Please try again.</p>
+                </div>
+              )}
             </form>
           </div>
         </div>
