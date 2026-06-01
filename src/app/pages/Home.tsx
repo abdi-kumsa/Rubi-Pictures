@@ -3,13 +3,10 @@ import { Helmet } from 'react-helmet-async';
 const base = import.meta.env.BASE_URL;
 const partners = [
   { name: "Al Jazeera", logo: `${base}Partners/Aljezeera.png` },
-  { name: "CGTN Beijing", logo: `${base}Partners/CGTN.png` },
-  { name: "CGTN France", logo: `${base}Partners/CGTN.png` },
-  { name: "CGTN Africa", logo: `${base}Partners/CGTN.png` },
+  { name: "CGTN", logo: `${base}Partners/CGTN.png` },
   { name: "DW", logo: `${base}Partners/DW.png` },
   { name: "CorpsAfrica", logo: `${base}Partners/CorpsAfrica.png` },
-  { name: "Afristar&SGR", logo: `${base}Partners/AfriStart&SGR.jpg` },
-  { name: "IN-HOUSE", logo: `${base}Company Logo.png?v=5` },
+  { name: "Afristar&SGR", logo: `${base}Partners/AfriStart&SGR.jfif` },
 ];
 
 export function Home() {
@@ -49,12 +46,7 @@ export function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="w-[1px] h-12 bg-white/40 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-3 bg-white animate-pulse"></div>
-          </div>
-        </div>
+
       </section>
 
       {/* Partner Logos Marquee */}
