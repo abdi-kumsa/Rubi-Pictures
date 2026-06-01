@@ -14,12 +14,12 @@ export function Home() {
     <div>
       <Helmet>
         <title>Rubi Pictures | Award-Winning African Media Production</title>
-        <meta name="description" content="We Tell Africa's Stories to the World. Award-winning film and media production based in Nairobi, Kenya." />
+        <meta name="description" content="We Tell Africa's Stories to the World. Award-winning film and production based in Nairobi, Kenya." />
         <meta property="og:title" content="Rubi Pictures | Award-Winning African Media Production" />
-        <meta property="og:description" content="We Tell Africa's Stories to the World. Award-winning film and media production based in Nairobi, Kenya." />
+        <meta property="og:description" content="We Tell Africa's Stories to the World. Award-winning film and production based in Nairobi, Kenya." />
         <meta property="og:url" content="https://abdi-kumsa.github.io/Rubi-Pictures/" />
         <meta name="twitter:title" content="Rubi Pictures | Award-Winning African Media Production" />
-        <meta name="twitter:description" content="We Tell Africa's Stories to the World. Award-winning film and media production based in Nairobi, Kenya." />
+        <meta name="twitter:description" content="We Tell Africa's Stories to the World. Award-winning film and production based in Nairobi, Kenya." />
       </Helmet>
       {/* Hero Section */}
       <section className="relative h-screen w-full bg-[#1a1a1a] flex items-center justify-center">
@@ -41,7 +41,7 @@ export function Home() {
               We Tell Africa's Stories to the World
             </h1>
             <p className="text-lg md:text-xl text-white/90">
-              Award-winning film and media production based in Nairobi, Kenya
+              Award-winning film and production based in Nairobi, Kenya
             </p>
           </div>
         </div>

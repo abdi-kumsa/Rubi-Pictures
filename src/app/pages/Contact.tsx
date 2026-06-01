@@ -43,7 +43,7 @@ export function Contact() {
                     href="mailto:hello@rubipictures.com"
                     className="font-medium text-black hover:text-black/70 transition-colors"
                   >
-                    rahawam27@gmail.com
+                    hello@rubipictures.com
                   </a>
                 </div>
               </div>
@@ -55,10 +55,10 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-black/50 mb-1">Phone</p>
                   <a
-                    href="tel:+254712345678"
+                    href="tel:+254725512732"
                     className="font-medium text-black hover:text-black/70 transition-colors"
                   >
-                    +254 725 512 732
+                    +254725512732
                   </a>
                 </div>
               </div>

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router";
 import { Helmet } from 'react-helmet-async';
 
+const base = import.meta.env.BASE_URL;
+
 const partners = [
   "All",
   "Al Jazeera",
@@ -25,8 +27,8 @@ const projects = [
   {
     title: "Rewriting libraries: Challenging the past in Kenya",
     client: "Al Jazeera",
-    link: "https://www.aljazeera.com/video/africa-direct/2023/7/12/rewriting-libraries-challenging-the-past-in-kenya",
-    thumbnailImage: null,
+    link: "https://www.youtube.com/watch?v=9w5-q-A24Gk&t=20s",
+    thumbnailImage: "https://img.youtube.com/vi/9w5-q-A24Gk/hqdefault.jpg",
     thumbnailFallbackColor: "#F59E0B",
   },
   {
@@ -40,28 +42,28 @@ const projects = [
     title: "Chine-Afrique 2035 : Aerospace",
     client: "CGTN France",
     link: "https://francais.cgtn.com/news/2025-05-28/1927553936387416066/index.html",
-    thumbnailImage: null,
+    thumbnailImage: `${base}Partners/VIDEO 1.jpg`,
     thumbnailFallbackColor: "#E11D48",
   },
   {
     title: "Chine-Afrique 2035 : Digital Economy",
     client: "CGTN France",
     link: "https://francais.cgtn.com/news/2025-05-29/1927925126534545409/index.html",
-    thumbnailImage: null,
+    thumbnailImage: `${base}Partners/VIDEO 2.jpg`,
     thumbnailFallbackColor: "#E11D48",
   },
   {
     title: "Chine-Afrique 2035 : AI, Information & Technology",
     client: "CGTN France",
     link: "https://francais.cgtn.com/news/2025-05-31/1928682565943107585/index.html",
-    thumbnailImage: null,
+    thumbnailImage: `${base}Partners/VIDEO 3.jpg`,
     thumbnailFallbackColor: "#E11D48",
   },
   {
     title: "Chine-Afrique 2035 : Green Development",
     client: "CGTN France",
     link: "https://francais.cgtn.com/news/2025-06-01/1929088551157702657/index.html",
-    thumbnailImage: null,
+    thumbnailImage: `${base}Partners/VIDEO 4.jpg`,
     thumbnailFallbackColor: "#E11D48",
   },
   {
@@ -142,7 +144,7 @@ const projects = [
     thumbnailFallbackColor: "#10B981",
   },
   {
-    title: "SGR Operations and Maintenance  #CCCCOpenDay by Spokesperson Olivia Mengich",
+    title: "Afristar/SGR 4th Anniversary",
     client: "Afristar&SGR",
     link: "https://www.youtube.com/watch?app=desktop&v=mHL7z7s86QQ",
     thumbnailImage: "https://img.youtube.com/vi/mHL7z7s86QQ/hqdefault.jpg",
