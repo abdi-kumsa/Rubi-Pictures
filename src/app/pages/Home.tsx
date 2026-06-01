@@ -1,17 +1,29 @@
-import { Play } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
+const base = import.meta.env.BASE_URL;
 const partners = [
-  { name: "Al Jazeera", logo: "/Partners/Aljezeera.png" },
-  { name: "IFRC", logo: "/Partners/IFRC.png" },
-  { name: "CGTN", logo: "/Partners/CGTN.png" },
-  { name: "DW", logo: "/Partners/DW.png" },
-  { name: "CorpsAfrica", logo: "/Partners/CorpsAfrica.png" },
-  { name: "Afristar&SGR", logo: "/Partners/AfriStart&SGR.jpg" },
+  { name: "Al Jazeera", logo: `${base}Partners/Aljezeera.png` },
+  { name: "CGTN Beijing", logo: `${base}Partners/CGTN.png` },
+  { name: "CGTN France", logo: `${base}Partners/CGTN.png` },
+  { name: "CGTN Africa", logo: `${base}Partners/CGTN.png` },
+  { name: "DW", logo: `${base}Partners/DW.png` },
+  { name: "CorpsAfrica", logo: `${base}Partners/CorpsAfrica.png` },
+  { name: "Afristar&SGR", logo: `${base}Partners/AfriStart&SGR.jpg` },
+  { name: "IN-HOUSE", logo: `${base}Company Logo.png?v=5` },
 ];
 
 export function Home() {
   return (
     <div>
+      <Helmet>
+        <title>Rubi Pictures | Award-Winning African Media Production</title>
+        <meta name="description" content="We Tell Africa's Stories to the World. Award-winning film and media production based in Nairobi, Kenya." />
+        <meta property="og:title" content="Rubi Pictures | Award-Winning African Media Production" />
+        <meta property="og:description" content="We Tell Africa's Stories to the World. Award-winning film and media production based in Nairobi, Kenya." />
+        <meta property="og:url" content="https://abdi-kumsa.github.io/Rubi-Pictures/" />
+        <meta name="twitter:title" content="Rubi Pictures | Award-Winning African Media Production" />
+        <meta name="twitter:description" content="We Tell Africa's Stories to the World. Award-winning film and media production based in Nairobi, Kenya." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-screen w-full bg-[#1a1a1a] flex items-center justify-center">
         {/* Video Background */}
@@ -22,7 +34,7 @@ export function Home() {
           playsInline 
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         >
-          <source src="/Hero Section Video.mp4" type="video/mp4" />
+          <source src={`${base}Hero Section Video.mp4`} type="video/mp4" />
         </video>
 
         {/* Hero Text Overlay */}

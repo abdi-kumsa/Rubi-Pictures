@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router";
+import { Helmet } from 'react-helmet-async';
 
 const partners = [
   "All",
   "Al Jazeera",
-  "IFRC",
-  "CGTN",
+  "CGTN Beijing",
+  "CGTN France",
+  "CGTN Africa",
   "DW",
   "CorpsAfrica",
   "Afristar&SGR",
+  "IN-HOUSE",
 ];
 
 const projects = [
@@ -20,52 +23,66 @@ const projects = [
     thumbnailFallbackColor: "#F59E0B",
   },
   {
-    title: "CGTN Documentary 1",
-    client: "CGTN",
+    title: "The Call of the Silk Road: Tanzania, doctors without borders",
+    client: "CGTN Beijing",
     link: "https://www.youtube.com/watch?v=MMjFwGe32Us",
     thumbnailImage: "https://img.youtube.com/vi/MMjFwGe32Us/hqdefault.jpg",
-    thumbnailFallbackColor: "#E11D48", 
-  },
-  {
-    title: "CGTN Documentary 2",
-    client: "CGTN",
-    link: "https://www.youtube.com/watch?app=desktop&v=zaxoZaDZE7g&t=33s",
-    thumbnailImage: "https://img.youtube.com/vi/zaxoZaDZE7g/hqdefault.jpg",
     thumbnailFallbackColor: "#E11D48",
   },
   {
-    title: "CGTN Documentary 3",
-    client: "CGTN",
-    link: "https://www.youtube.com/watch?v=Q8pWMHda10c",
+    title: "Chine-Afrique 2035 : redéfinir le futur - Cap sur les étoiles - CGTN",
+    client: "CGTN France",
+    link: "https://francais.cgtn.com/news/2025-05-28/1927553936387416066/index.html",
+    thumbnailImage: null,
+    thumbnailFallbackColor: "#E11D48",
+  },
+  {
+    title: "Chine-Afrique 2035 : redéfinir le futur - Aux frontières du numérique - CGTN",
+    client: "CGTN France",
+    link: "https://francais.cgtn.com/news/2025-05-29/1927925126534545409/index.html",
+    thumbnailImage: null,
+    thumbnailFallbackColor: "#E11D48",
+  },
+  {
+    title: "Chine-Afrique 2035 : redéfinir le futur - Les bâtisseurs du futur - CGTN",
+    client: "CGTN France",
+    link: "https://francais.cgtn.com/news/2025-05-31/1928682565943107585/index.html",
+    thumbnailImage: null,
+    thumbnailFallbackColor: "#E11D48",
+  },
+  {
+    title: "Chine-Afrique 2035 : redéfinir le futur - L'avenir en vert - CGTN",
+    client: "CGTN France",
+    link: "https://francais.cgtn.com/news/2025-06-01/1929088551157702657/index.html",
+    thumbnailImage: null,
+    thumbnailFallbackColor: "#E11D48",
+  },
+  {
+    title: "Faces of Africa - Even The Gangsters Pt.1",
+    client: "CGTN Africa",
+    link: "https://www.youtube.com/watch?v=Q8pWMHda10c&t=1389s",
     thumbnailImage: "https://img.youtube.com/vi/Q8pWMHda10c/hqdefault.jpg",
     thumbnailFallbackColor: "#E11D48",
   },
   {
-    title: "CGTN Documentary 4",
-    client: "CGTN",
-    link: "https://www.youtube.com/watch?v=d3-RsG3Nopc",
+    title: "Faces of Africa - Even The Gangsters Pt.2",
+    client: "CGTN Africa",
+    link: "https://www.youtube.com/watch?v=d3-RsG3Nopc&t=9s",
     thumbnailImage: "https://img.youtube.com/vi/d3-RsG3Nopc/hqdefault.jpg",
     thumbnailFallbackColor: "#E11D48",
   },
   {
-    title: "CGTN Documentary 5",
-    client: "CGTN",
-    link: "https://www.youtube.com/watch?v=mHlq0FbbwWk&t=1s",
-    thumbnailImage: "https://img.youtube.com/vi/mHlq0FbbwWk/hqdefault.jpg",
-    thumbnailFallbackColor: "#E11D48",
-  },
-  {
-    title: "CGTN Documentary 6",
-    client: "CGTN",
-    link: "https://youtu.be/5dZIBsk3Apk?si=lAlZ-uW19HUHBdhB",
+    title: "Faces of Africa - Food For Africa Pt.1",
+    client: "CGTN Africa",
+    link: "https://www.youtube.com/watch?v=5dZIBsk3Apk&t=7s",
     thumbnailImage: "https://img.youtube.com/vi/5dZIBsk3Apk/hqdefault.jpg",
     thumbnailFallbackColor: "#E11D48",
   },
   {
-    title: "CGTN Documentary 7",
-    client: "CGTN",
-    link: "https://www.youtube.com/watch?v=Mb_mdXILSSU",
-    thumbnailImage: "https://img.youtube.com/vi/Mb_mdXILSSU/hqdefault.jpg",
+    title: "Faces of Africa - Food for Africa Pt.2",
+    client: "CGTN Africa",
+    link: "https://www.youtube.com/watch?v=mHlq0FbbwWk",
+    thumbnailImage: "https://img.youtube.com/vi/mHlq0FbbwWk/hqdefault.jpg",
     thumbnailFallbackColor: "#E11D48",
   },
   {
@@ -73,10 +90,10 @@ const projects = [
     client: "DW",
     link: "https://www.dw.com/en/the-kenyan-ocean-bottle-school/video-47185214",
     thumbnailImage: null,
-    thumbnailFallbackColor: "#2563EB", 
+    thumbnailFallbackColor: "#2563EB",
   },
   {
-    title: "DW Feature 1",
+    title: "Kibera's king of condoms",
     client: "DW",
     link: "https://www.youtube.com/watch?v=xkMYyAGoyYc",
     thumbnailImage: "https://img.youtube.com/vi/xkMYyAGoyYc/hqdefault.jpg",
@@ -90,39 +107,46 @@ const projects = [
     thumbnailFallbackColor: "#2563EB",
   },
   {
-    title: "DW Feature 2",
+    title: "Playing football in Zanzibar - Tanzania | Meet Zanzibar&#39;s female strikers",
     client: "DW",
     link: "https://www.youtube.com/watch?v=fpwuN0o89DY",
     thumbnailImage: "https://img.youtube.com/vi/fpwuN0o89DY/hqdefault.jpg",
     thumbnailFallbackColor: "#2563EB",
   },
   {
-    title: "DW Feature 3",
+    title: "From a cartel to an NGO: Securing clean water for Kibera slum",
     client: "DW",
     link: "https://www.youtube.com/watch?v=66zk96-Sry4",
     thumbnailImage: "https://img.youtube.com/vi/66zk96-Sry4/hqdefault.jpg",
     thumbnailFallbackColor: "#2563EB",
   },
   {
-    title: "Corps Africa Initiative 1",
+    title: "CorpsAfrica  Kenya 2023 Documentary",
     client: "CorpsAfrica",
     link: "https://www.youtube.com/watch?v=dDzXJ9w_MMI",
     thumbnailImage: "https://img.youtube.com/vi/dDzXJ9w_MMI/hqdefault.jpg",
     thumbnailFallbackColor: "#10B981",
   },
   {
-    title: "Corps Africa Initiative 2",
+    title: "CORPSAFRICA 2022",
     client: "CorpsAfrica",
     link: "https://www.youtube.com/watch?v=tbKFtFvfoJc",
     thumbnailImage: "https://img.youtube.com/vi/tbKFtFvfoJc/hqdefault.jpg",
     thumbnailFallbackColor: "#10B981",
   },
   {
-    title: "Afristart&SGR Profile",
+    title: "SGR Operations and Maintenance  #CCCCOpenDay by Spokesperson Olivia Mengich",
     client: "Afristar&SGR",
     link: "https://www.youtube.com/watch?app=desktop&v=mHL7z7s86QQ",
     thumbnailImage: "https://img.youtube.com/vi/mHL7z7s86QQ/hqdefault.jpg",
     thumbnailFallbackColor: "#8B5CF6",
+  },
+  {
+    title: "The Silk Thread",
+    client: "IN-HOUSE",
+    link: "https://www.youtube.com/watch?v=d11p7CuFlPg",
+    thumbnailImage: "https://img.youtube.com/vi/d11p7CuFlPg/hqdefault.jpg",
+    thumbnailFallbackColor: "#64748B",
   }
 ];
 
@@ -144,6 +168,12 @@ export function Work() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Our Work | Rubi Pictures</title>
+        <meta name="description" content="Browse our portfolio of award-winning film and media productions across Africa." />
+        <meta property="og:title" content="Our Work | Rubi Pictures" />
+        <meta property="og:description" content="Browse our portfolio of award-winning film and media productions across Africa." />
+      </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-12">Our Work</h1>
 
@@ -153,11 +183,10 @@ export function Work() {
             <button
               key={partner}
               onClick={() => setActiveFilter(partner)}
-              className={`pb-3 px-2 text-sm font-medium whitespace-nowrap transition-colors relative ${
-                activeFilter === partner
-                  ? "text-black"
-                  : "text-black/50 hover:text-black/75"
-              }`}
+              className={`pb-3 px-2 text-sm font-medium whitespace-nowrap transition-colors relative ${activeFilter === partner
+                ? "text-black"
+                : "text-black/50 hover:text-black/75"
+                }`}
             >
               {partner}
               {activeFilter === partner && (

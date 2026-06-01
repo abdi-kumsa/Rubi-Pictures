@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,11 +11,17 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    // TODO: Connect to backend for email processing
   };
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Contact Us | Rubi Pictures</title>
+        <meta name="description" content="Get in touch with Rubi Pictures for your next production project. Located in Nairobi, Kenya." />
+        <meta property="og:title" content="Contact Us | Rubi Pictures" />
+        <meta property="og:description" content="Get in touch with Rubi Pictures for your next production project. Located in Nairobi, Kenya." />
+      </Helmet>
       <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column */}
@@ -22,8 +29,7 @@ export function Contact() {
             <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">Get In Touch</h1>
             <p className="text-lg text-[#1a1a1a] mb-12 leading-relaxed">
               Have a project in mind or want to learn more about our services?
-              We'd love to hear from you. Reach out and let's start a
-              conversation about bringing your vision to life.
+              We'd love to hear from you.
             </p>
 
             <div className="space-y-6">
@@ -37,7 +43,7 @@ export function Contact() {
                     href="mailto:hello@rubipictures.com"
                     className="font-medium text-black hover:text-black/70 transition-colors"
                   >
-                    hello@rubipictures.com
+                    rahawam27@gmail.com
                   </a>
                 </div>
               </div>
@@ -52,7 +58,7 @@ export function Contact() {
                     href="tel:+254712345678"
                     className="font-medium text-black hover:text-black/70 transition-colors"
                   >
-                    +254 712 345 678
+                    +254 725 512 732
                   </a>
                 </div>
               </div>
@@ -66,7 +72,7 @@ export function Contact() {
                   <p className="font-medium text-black">
                     Nairobi, Kenya
                     <br />
-                    Westlands, Parklands Road
+                    CCI, Tatu City
                   </p>
                 </div>
               </div>

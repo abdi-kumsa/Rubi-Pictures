@@ -4,11 +4,13 @@ import { Menu, X } from "lucide-react";
 
 const partners = [
   "Al Jazeera",
-  "IFRC",
-  "CGTN",
+  "CGTN Beijing",
+  "CGTN France",
+  "CGTN Africa",
   "DW",
   "CorpsAfrica",
   "Afristar&SGR",
+  "IN-HOUSE",
 ];
 
 export function Header() {
@@ -38,7 +40,7 @@ export function Header() {
       {/* Top Utility Bar (Hidden on mobile) */}
       <div className={`hidden lg:block bg-gradient-to-r from-[#F8F8F8] via-white to-[#F8F8F8] border-b transition-all duration-300 overflow-hidden ${isScrolled ? 'h-0 opacity-0 border-transparent' : 'h-[44px] opacity-100 border-[#e0e0e0]'}`}>
         <div className="max-w-[1400px] mx-auto px-6 py-3.5">
-          <div className="flex items-center justify-center gap-1">
+          <div className="flex items-center justify-start gap-1">
             <span className="text-xs font-semibold text-black/40 mr-4 tracking-wider">
               OUR PARTNERS
             </span>
@@ -64,7 +66,7 @@ export function Header() {
         <div className={`max-w-[1400px] mx-auto px-4 md:px-6 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
           <div className="flex items-center justify-between">
             <Link to="/" className="text-xl font-bold z-50" onClick={() => setIsMobileMenuOpen(false)}>
-              <img src="/Company Logo.png?v=4" alt="Rubi Pictures" className="h-10 md:h-16 w-auto object-contain" />
+              <img src={`${import.meta.env.BASE_URL}Company Logo.png?v=5`} alt="Rubi Pictures" className="h-10 md:h-16 w-auto object-contain" />
             </Link>
 
             {/* Desktop Nav */}

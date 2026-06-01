@@ -1,10 +1,17 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet-async';
 
 export function About() {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>About Us | Rubi Pictures</title>
+        <meta name="description" content="Learn more about Rubi Pictures and our founder, Rahab Wambui. Africa's Premier Production House." />
+        <meta property="og:title" content="About Us | Rubi Pictures" />
+        <meta property="og:description" content="Learn more about Rubi Pictures and our founder, Rahab Wambui. Africa's Premier Production House." />
+      </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -18,13 +25,19 @@ export function About() {
 
           <div className="space-y-6 text-lg text-[#1a1a1a] leading-relaxed mb-24">
             <p>
-              Rubi Pictures is a Nairobi-based film and media production company dedicated to telling authentic African stories with world-class production quality. We have built a proven track record working with some of the world's most respected international broadcasters and organizations — including Al Jazeera, CGTN, DW, the International Federation of the Red Cross, and CorpsAfrica.
+              Rubi Pictures is a Nairobi-based film production company dedicated to telling authentic African stories with world-class production quality. We have built a proven track record working with some of the world's most respected international broadcasters and organizations, including Al Jazeera, CGTN Beijing, CGTN France, CGTN Africa, DW, the International Federation of the Red Cross (IFRC), and CorpsAfrica.
             </p>
             <p>
-              We specialize in human-interest documentaries, impact-driven development storytelling, commercial films, and full-cycle post-production services. From research and scripting through to final delivery, we manage every stage of production with precision, integrity, and creative excellence.
+              We specialize in human-interest documentaries, impact-driven development storytelling, promotional brand films, and full-cycle post-production services.
             </p>
             <p>
-              What sets us apart is rare: deep local knowledge across Kenya and Africa, combined with the editorial standards demanded by the world's most discerning broadcasters and brands. If you're looking for a production partner who brings both heart and professionalism to every frame — you've found them.
+              From research and scripting through to final delivery, we manage every stage of production with creative excellence.
+            </p>
+            <p>
+              What sets us apart is deep local knowledge across 50 African countries in Africa, combined with the editorial standards demanded by the world's most discerning broadcasters and brands.
+            </p>
+            <p>
+              If you're looking for a production partner who brings both heart and professionalism to every frame, you've found them.
             </p>
           </div>
         </motion.div>
@@ -49,7 +62,7 @@ export function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             {/* Left: Founder Image Placeholder */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -60,11 +73,11 @@ export function About() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#B93B8F] to-[#FF6B35] rounded-bl-full opacity-20"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#B93B8F] to-[#FF6B35] rounded-tr-full opacity-20"></div>
 
-              <img src="/CEO/Rahab.png" alt="Rahab Wambui" className="w-full h-full object-cover relative z-10" />
+              <img src={`${import.meta.env.BASE_URL}CEO/Rahab.png`} alt="Rahab Wambui" className="w-full h-full object-cover relative z-10" />
             </motion.div>
 
             {/* Right: Featured Detail Card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -82,13 +95,13 @@ export function About() {
 
                 <div className="space-y-6 text-white/80 leading-relaxed text-lg mb-8">
                   <p>
-                    With nearly 13 years of hands-on production experience, Rahab Wambui has established herself as one of Africa's foremost documentary producers and directors. As Commissioning Editor and Series Producer at China Global Television Network (CGTN Africa) for close to a decade, she led multi-country productions across Eastern, Southern, Northern, and Central Africa — overseeing everything from concept development to post-production delivery.
+                    With nearly 13 years of hands-on production experience, Rahab Wambui has established herself as one of Africa's foremost documentary producers and directors. As Commissioning Editor and Series Producer at China Global Television Network (CGTN Africa) for close to a decade, she led multi-country productions across Eastern, Southern, Northern, and Central Africa, overseeing everything from concept development to post-production delivery.
                   </p>
                   <p>
                     Her work has reached global audiences through Al Jazeera, CGTN, DW, and leading development organizations. In 2025, she directed episodes for CGTN France's landmark Chine-Afrique 2035 series spanning nine African countries. Her portfolio spans human-interest stories, environmental and development impact documentaries, and high-stakes promotional films used as marketing tools by multinational corporations across Southeast Asia and beyond.
                   </p>
                   <p>
-                    Rahab doesn't just produce content — she builds narratives that move people, shift perceptions, and open doors. When you work with Rubi Pictures, you work directly with that level of expertise.
+                    Rahab doesn't just produce content, she builds narratives that move people, shift perceptions, and open doors. When you work with Rubi Pictures, you work directly with that level of expertise.
                   </p>
                 </div>
 
