@@ -72,7 +72,6 @@ export function Contact() {
                   <p className="font-medium text-black">
                     Nairobi, Kenya
                     <br />
-                    CCI, Tatu City
                   </p>
                 </div>
               </div>
