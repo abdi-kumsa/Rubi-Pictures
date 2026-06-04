@@ -13,7 +13,7 @@ export function Home() {
   return (
     <div>
       <Helmet>
-        <title>Rubi Pictures | Award-Winning African Media Production</title>
+        <title>Rubi Pictures | Award-Winning African Film Production Company</title>
         <meta name="description" content="We Tell Africa's Stories to the World. Award-winning film production based in Nairobi, Kenya." />
         <meta property="og:title" content="Rubi Pictures | Award-Winning African Media Production" />
         <meta property="og:description" content="We Tell Africa's Stories to the World. Award-winning film production based in Nairobi, Kenya." />
@@ -41,7 +41,7 @@ export function Home() {
               We Tell Africa's Stories to the World
             </h1>
             <p className="text-lg md:text-xl text-white/90">
-              Award-winning film production based in Nairobi, Kenya
+              Award-winning film production company based in Nairobi, Kenya
             </p>
           </div>
         </div>
