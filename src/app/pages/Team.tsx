@@ -58,12 +58,12 @@ export function Team() {
         <title>Our Team | Rubi Pictures</title>
         <meta
           name="description"
-          content="Meet the Rubi Pictures team — producers, cinematographers, editors and production specialists telling authentic African stories."
+          content="Meet the Rubi Pictures team — producer, cinematographer, video editor and professionals telling authentic African stories."
         />
         <meta property="og:title" content="Our Team | Rubi Pictures" />
         <meta
           property="og:description"
-          content="Meet the Rubi Pictures team — producers, cinematographers, editors and production specialists telling authentic African stories."
+          content="Meet the Rubi Pictures team — producer, cinematographer, video editor and professionals telling authentic African stories."
         />
       </Helmet>
 
