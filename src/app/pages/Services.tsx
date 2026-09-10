@@ -7,7 +7,7 @@ const services = [
   {
     title: "Research and Development",
     fullDesc:
-      "With extensive experience and networks across multiple sectors in nearly 50 African countries, our prospecting and outreach capabilities provide you with an unparalleled advantage.",
+      "With extensive experience and networks across 50 African countries across multiple sectors, our prospecting and outreach capabilities provide you with an unparalleled advantage.",
   },
   {
     title: "Pre-Production",
