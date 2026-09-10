@@ -84,6 +84,12 @@ export function Header() {
                 About
               </Link>
               <Link
+                to="/team"
+                className="text-sm font-medium text-black/80 hover:bg-gradient-to-r hover:from-[#B93B8F] hover:to-[#FF6B35] hover:bg-clip-text hover:text-transparent transition-all duration-300"
+              >
+                Team
+              </Link>
+              <Link
                 to="/work"
                 className="text-sm font-medium text-black/80 hover:bg-gradient-to-r hover:from-[#B93B8F] hover:to-[#FF6B35] hover:bg-clip-text hover:text-transparent transition-all duration-300"
               >
@@ -131,6 +137,13 @@ export function Header() {
               className="text-lg font-medium text-black/80 hover:text-[#FF6B35]"
             >
               About
+            </Link>
+            <Link
+              to="/team"
+              onClick={toggleMobileMenu}
+              className="text-lg font-medium text-black/80 hover:text-[#FF6B35]"
+            >
+              Team
             </Link>
             <Link
               to="/work"

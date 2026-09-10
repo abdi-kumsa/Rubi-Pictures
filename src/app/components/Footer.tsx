@@ -28,6 +28,12 @@ export function Footer() {
               About
             </Link>
             <Link
+              to="/team"
+              className="text-sm font-medium text-black/70 hover:text-black transition-colors"
+            >
+              Team
+            </Link>
+            <Link
               to="/work"
               className="text-sm font-medium text-black/70 hover:text-black transition-colors"
             >
