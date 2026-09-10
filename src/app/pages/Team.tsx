@@ -82,7 +82,7 @@ export function Team() {
             The Team
           </h1>
           <p className="text-black/60 max-w-xl text-lg">
-            The producers, cinematographers, editors and specialists behind every Rubi Pictures story.
+            The producer, cinematographer, video editor and professionals behind every Rubi Pictures story.
           </p>
         </motion.div>
 
