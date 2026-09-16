@@ -74,15 +74,6 @@ export function Contact() {
                 <div className="w-10 h-10 rounded-full bg-[#F5F5F5] flex items-center justify-center flex-shrink-0">
                   <Phone size={18} className="text-black" />
                 </div>
-                <div>
-                  <p className="text-sm text-black/50 mb-1">Phone</p>
-                  <a
-                    href="tel:+254725512732"
-                    className="font-medium text-black hover:text-black/70 transition-colors"
-                  >
-                    +254725512732
-                  </a>
-                </div>
               </div>
 
               <div className="flex items-start gap-4">
