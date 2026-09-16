@@ -65,7 +65,7 @@ export function Contact() {
                     href="mailto:hello@rubipictures.com"
                     className="font-medium text-black hover:text-black/70 transition-colors"
                   >
-                    hello@rubipictures.com
+                    rahab@rubipictures.com
                   </a>
                 </div>
               </div>
