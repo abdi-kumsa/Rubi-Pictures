@@ -104,21 +104,23 @@ export function Header() {
 
               <Link
                 to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg"
+                className="text-sm font-bold text-black hover:bg-gradient-to-r hover:from-[#B93B8F] hover:to-[#FF6B35] hover:bg-clip-text hover:text-transparent transition-all duration-300"
               >
                 Contact Us
               </Link>
 
               <Link
                 to="/ibca"
-                className="flex items-center hover:opacity-90 transition-opacity"
+                className="flex items-center ml-1 hover:opacity-90 transition-opacity"
                 aria-label="iBCA For Creators"
               >
-                <img
-                  src={`${import.meta.env.BASE_URL}iBCA For Creators.webp`}
-                  alt="iBCA For Creators"
-                  className="h-10 w-auto object-contain"
-                />
+                <span className="inline-flex h-12 overflow-hidden rounded-xl shadow-sm">
+                  <img
+                    src={`${import.meta.env.BASE_URL}iBCA For Creators.webp`}
+                    alt="iBCA For Creators"
+                    className="h-full w-auto object-contain"
+                  />
+                </span>
               </Link>
             </nav>
 
@@ -174,7 +176,7 @@ export function Header() {
             <Link
               to="/contact"
               onClick={toggleMobileMenu}
-              className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg mt-4"
+              className="text-lg font-bold text-black hover:text-[#FF6B35] mt-2"
             >
               Contact Us
             </Link>
@@ -184,11 +186,13 @@ export function Header() {
               className="flex items-center hover:opacity-90 transition-opacity"
               aria-label="iBCA For Creators"
             >
-              <img
-                src={`${import.meta.env.BASE_URL}iBCA For Creators.webp`}
-                alt="iBCA For Creators"
-                className="h-12 w-auto object-contain"
-              />
+              <span className="inline-flex h-14 overflow-hidden rounded-xl shadow-sm">
+                <img
+                  src={`${import.meta.env.BASE_URL}iBCA For Creators.webp`}
+                  alt="iBCA For Creators"
+                  className="h-full w-auto object-contain"
+                />
+              </span>
             </Link>
           </div>
         )}
