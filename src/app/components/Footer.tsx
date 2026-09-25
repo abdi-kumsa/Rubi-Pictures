@@ -46,6 +46,12 @@ export function Footer() {
               Services
             </Link>
             <Link
+              to="/ibca"
+              className="text-sm font-medium text-black/70 hover:text-black transition-colors"
+            >
+              iBCA For Creators
+            </Link>
+            <Link
               to="/contact"
               className="text-sm font-medium text-black/70 hover:text-black transition-colors"
             >

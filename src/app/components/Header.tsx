@@ -103,6 +103,18 @@ export function Header() {
               </Link>
 
               <Link
+                to="/ibca"
+                className="flex items-center hover:opacity-90 transition-opacity"
+                aria-label="iBCA For Creators"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}iBCA For Creators.webp`}
+                  alt="iBCA For Creators"
+                  className="h-10 w-auto object-contain"
+                />
+              </Link>
+
+              <Link
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg"
               >
@@ -158,6 +170,18 @@ export function Header() {
               className="text-lg font-medium text-black/80 hover:text-[#FF6B35]"
             >
               Services
+            </Link>
+            <Link
+              to="/ibca"
+              onClick={toggleMobileMenu}
+              className="flex items-center hover:opacity-90 transition-opacity"
+              aria-label="iBCA For Creators"
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}iBCA For Creators.webp`}
+                alt="iBCA For Creators"
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <Link
               to="/contact"
