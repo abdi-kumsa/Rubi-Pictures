@@ -103,6 +103,13 @@ export function Header() {
               </Link>
 
               <Link
+                to="/contact"
+                className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg"
+              >
+                Contact Us
+              </Link>
+
+              <Link
                 to="/ibca"
                 className="flex items-center hover:opacity-90 transition-opacity"
                 aria-label="iBCA For Creators"
@@ -112,13 +119,6 @@ export function Header() {
                   alt="iBCA For Creators"
                   className="h-10 w-auto object-contain"
                 />
-              </Link>
-
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg"
-              >
-                Contact Me
               </Link>
             </nav>
 
@@ -172,6 +172,13 @@ export function Header() {
               Services
             </Link>
             <Link
+              to="/contact"
+              onClick={toggleMobileMenu}
+              className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg mt-4"
+            >
+              Contact Us
+            </Link>
+            <Link
               to="/ibca"
               onClick={toggleMobileMenu}
               className="flex items-center hover:opacity-90 transition-opacity"
@@ -182,13 +189,6 @@ export function Header() {
                 alt="iBCA For Creators"
                 className="h-12 w-auto object-contain"
               />
-            </Link>
-            <Link
-              to="/contact"
-              onClick={toggleMobileMenu}
-              className="px-8 py-3 bg-gradient-to-r from-[#B93B8F] to-[#FF6B35] text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg mt-4"
-            >
-              Contact Me
             </Link>
           </div>
         )}
